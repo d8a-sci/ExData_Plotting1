@@ -22,7 +22,7 @@ plot_data <- function(data, dev="screen") {
 	par(mfcol=c(2,2))
         ## Create plot [1,1]
 	with( workdata, {
-		plot(DateTime, Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)")
+		plot(DateTime, Global_active_power, type="l", xlab="", ylab="Global Active Power")
 	})
 
         ## Create plot [2,1]
@@ -35,7 +35,7 @@ plot_data <- function(data, dev="screen") {
 	with(	workdata, {
 		lines(DateTime, Sub_metering_3, type="l", col="blue",	xlab="")
 	})
-	legend(	"topright", lty=1, col=c("black","red","blue"), legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
+	legend(	"topright", lty=1, bty="n", col=c("black","red","blue"), legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
 
 
         ## Create plot [1,2]
@@ -47,10 +47,6 @@ plot_data <- function(data, dev="screen") {
 	with(	workdata, {
 		plot(DateTime,	Global_reactive_power, type="l", col="black", xlab="datetime", ylab="Global_reactive_power")
 	})
-
-
-
-
 
 
 	if ( dev != "screen" ) {

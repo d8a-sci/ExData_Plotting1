@@ -1,4 +1,4 @@
-require(lubridate)        # convenient for dates
+require(lubridate)        # convenient for dates 
 
 
 loadnplot <- function(directory, dev="screen") {
